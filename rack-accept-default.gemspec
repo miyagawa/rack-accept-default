@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["miyagawa@bulknews.net"]
   s.homepage    = "https://github.com/miyagawa/rack-accept-default"
   s.summary     = "Set default value for Accept: header when it is not present"
-  s.description = s.summary
+  s.description = "A tiny piece of Rack middleware to set the default Accept: header"
 
   s.rubyforge_project = "rack-accept-default"
 
