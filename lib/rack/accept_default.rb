@@ -6,9 +6,7 @@ module Rack
     end
 
     def call(env)
-      unless env.key?('HTTP_ACCEPT')
-        env['HTTP_ACCEPT'] = @default
-      end
+      env['HTTP_ACCEPT'] ||= @default
       @app.call(env)
     end
   end
