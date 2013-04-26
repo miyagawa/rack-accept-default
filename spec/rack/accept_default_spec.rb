@@ -14,6 +14,12 @@ describe Rack::AcceptDefault do
     last_response.body.should == '*/*'
   end
 
+  it "should override given nil Accept header" do
+    get "/", {}, { "HTTP_ACCEPT" => nil }
+    last_response.should be_ok
+    last_response.body.should == "*/*"
+  end
+
   it "should not override given Accept header" do
     get '/', {}, { 'HTTP_ACCEPT' => "application/json" }
     last_response.should be_ok
