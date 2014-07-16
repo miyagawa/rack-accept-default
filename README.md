@@ -17,6 +17,12 @@ require 'rack-accept-default`
 use Rack::AcceptDefault
 ```
 
+Additionally, the default `Accept:` header can be customized:
+
+```
+use Rack::AcceptDefault, 'application/json'
+```
+
 ## Why
 
 Rails default MIME negotiation (in ActionPack) handles requests without `Accept:` headers as *invalid*, and assume it wants the HTML view. This assumption is wrong per RFC 2616 HTTP/1.1 specification.
