@@ -19,7 +19,7 @@ use Rack::AcceptDefault
 
 Additionally, the default `Accept:` header can be customized:
 
-```
+```ruby
 use Rack::AcceptDefault, 'application/json'
 ```
 
